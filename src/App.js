@@ -1,9 +1,10 @@
 
 import * as React from 'react';
-import ReactMapGL, {Marker} from 'react-map-gl';
+import ReactMapGL, {Marker, Popup} from 'react-map-gl';
 import Providers from './Providers';
 import Locations from './Locations';
 import Login from './Login';
+import ProviderList from './ProviderList';
 
 export default function App() {
   const [viewport, setViewport] = React.useState({
@@ -12,23 +13,25 @@ export default function App() {
     zoom: 8,
     height: window.innerHeight,
     width: window.innerWidth
-
   });
 
-
+  const [showPopup, togglePopup] = React.useState(false)
 
 
   return (
     <div>
     <h1>Tongue Tie Providers</h1>
-    <Login />
-    {/* <div id = "navbar">
+    {/* <Login /> */}
+    <div id = "navbar">
     <nav>
     <ul>
     <li><Providers /></li>
-    <li><Locations /></li>
+    <li><Locations latitude = {viewport.latitude} longitude = {viewport.longitude}/></li>
     </ul>
     </nav>
+    </div>
+    <div id = "providers">
+      <ProviderList />
     </div>
     <div id = "map">
     <ReactMapGL
@@ -38,10 +41,24 @@ export default function App() {
       width="100%"
       height="100%"
       onViewportChange={(viewport) => setViewport(viewport)}
-    />
-    {/* <Marker longitude = {13.0} latitude = {43.0}></Marker> */}
+    >
+       {showPopup && <Popup
+          latitude={37.78}
+          longitude={-122.41}
+          closeButton={true}
+          closeOnClick={false}
+          onClose={() => togglePopup(false)}
+          anchor="top" >
+          <div>You are here</div>
+        </Popup>}
+    <Marker latitude = {38.948880} longitude = {-104.739920}>
+      <div id="home">
+        I live here!
     </div>
-    // </div> */}
+    </Marker>
+    </ReactMapGL>
+    </div>
+    </div>
   );
 }
 

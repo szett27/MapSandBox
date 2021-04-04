@@ -6,9 +6,11 @@ function Providers(){
 
     return(
         <div id = "providers">
-        <select><option>Dr #1</option>
-        <option>Dr #2</option>
-        <option>Dr #3</option>
+        <select><option>Dentist</option>
+        <option>RN</option>
+        <option>Lactation Consultant</option>
+        <option>CST</option>
+        <option>Chriopractor</option>
         </select>
         </div>
     )

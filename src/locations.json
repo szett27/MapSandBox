@@ -1,0 +1,38 @@
+[
+
+
+    {
+        "name": "San Francisco",
+        "lat": 37.7749, 
+        "long": 122.4194
+    },
+    
+ 
+    {
+        "name": "San Diego",
+        "lat": 32.7157,
+        "long": 117.1611
+    },
+
+   
+    {
+        "name": "Los Angeles",
+        "lat": 34.0522, 
+        "long": 118.2437
+    },
+    
+    {
+        "name": "Bakersfield",
+        "lat": 35.3733,
+        "long": 119.0187
+    },
+
+    {
+        "name": "Riverside",
+        "lat": 33.9806, 
+        "long": 117.3755
+    }
+    
+    
+
+]
