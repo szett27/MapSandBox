@@ -1,0 +1,25 @@
+#map {
+    position:absolute; 
+    top:100px; 
+    padding-top: 15px;
+    bottom:0; 
+    width:100%;
+    }
+    
+
+h1{
+    text-align: center;
+    background-color: blue;
+}
+
+
+#navbar{
+    width: 100vw;
+    height: 10vh;
+    list-style-type: none;
+    margin: 0;
+    padding: 14px 16px;
+    float: left;
+    text-decoration: none;
+    background-color: black;
+}
