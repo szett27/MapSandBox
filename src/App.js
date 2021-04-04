@@ -3,6 +3,7 @@ import * as React from 'react';
 import ReactMapGL, {Marker} from 'react-map-gl';
 import Providers from './Providers';
 import Locations from './Locations';
+import Login from './Login';
 
 export default function App() {
   const [viewport, setViewport] = React.useState({
@@ -20,7 +21,8 @@ export default function App() {
   return (
     <div>
     <h1>Tongue Tie Providers</h1>
-    <div id = "navbar">
+    <Login />
+    {/* <div id = "navbar">
     <nav>
     <ul>
     <li><Providers /></li>
@@ -39,7 +41,7 @@ export default function App() {
     />
     {/* <Marker longitude = {13.0} latitude = {43.0}></Marker> */}
     </div>
-    </div>
+    // </div> */}
   );
 }
 
